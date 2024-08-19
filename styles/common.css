@@ -1,3 +1,5 @@
+/* 반응형 width 값 변경 시 자연스러운 동적 추가 기능 */
+*{transition: width 0.3, font-size: 0.3s;}
 /* header, footer전용위치 */
 /* header pc */
 /* header tablet+mobile nav */
@@ -56,6 +58,7 @@ header .lnb .m_nav {
     background: brown;
     width: 32px; height: 32px;
     position: relative;
+    display: none;
 }
 header .lnb .m_nav span {
     display: block;
@@ -77,10 +80,24 @@ header .lnb .m_nav span:nth-child(3) {
     transform: rotate(-45deg);
     transform-origin: left top;
 } */
-header .m_nav_wrap {display: none;}
-header .m_nav_wrap .gnb {}
-header .m_nav_wrap .gnb > li {}
-header .m_nav_wrap .gnb > li > a {}
+header .m_nav_wrap {
+    background: #222;
+    position: fixed; right: 0; top: 80px; z-index: 999;
+}
+header .m_nav_wrap .gnb {
+}
+header .m_nav_wrap .gnb > li {
+    padding: 0 15px 43px;
+}
+header .m_nav_wrap .gnb > li > a {
+    color: #fff; line-height: 1.7;
+    font-size: 19px;
+}
 header .m_nav_wrap .gnb > li > .sub {}
-header .m_nav_wrap .gnb > li > .sub li {}
-header .m_nav_wrap .gnb > li > .sub li a {}
+header .m_nav_wrap .gnb > li > .sub li {
+    padding: 15px 0;
+}
+header .m_nav_wrap .gnb > li > .sub li a {
+    color: #fff;
+    font-size: 16px;
+}
